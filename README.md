@@ -472,8 +472,8 @@ This repository was validated before publication:
       <a href="https://github.com/ongkipro">@ongkipro</a>
     </td>
     <td align="center" width="33%">
-      <strong>Email</strong><br />
-      <a href="mailto:get@ongki.pro">get@ongki.pro</a>
+      <strong>Contact</strong><br />
+      <a href="https://ongki.pro">ongki.pro</a>
     </td>
   </tr>
 </table>
@@ -482,7 +482,7 @@ This repository was validated before publication:
 
 [![Website](https://img.shields.io/badge/Website-ongki.pro-111827?style=for-the-badge)](https://ongki.pro)
 [![GitHub](https://img.shields.io/badge/GitHub-ongkipro-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ongkipro)
-[![Email](https://img.shields.io/badge/Email-get%40ongki.pro-2563eb?style=for-the-badge)](mailto:get@ongki.pro)
+[![Contact](https://img.shields.io/badge/Contact-ongki.pro-2563eb?style=for-the-badge)](https://ongki.pro)
 [![License](https://img.shields.io/badge/License-MIT-16a34a?style=for-the-badge)](./LICENSE)
 
 <br />
