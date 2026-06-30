@@ -10,6 +10,7 @@ Last updated: 2026-06-30
 2. `PLAYBOOK.md`
 3. specific mode file if needed:
    - `ASTRO_SEO_PLAYBOOK.md`
+   - `NEXTJS_SEO_PLAYBOOK.md`
    - `SHOPIFY_SEO_PLAYBOOK.md`
    - `LOCAL_BUSINESS_SEO_PLAYBOOK.md`
    - `SEARCH_ENGINE_ALGORITHM_BRIEF.md`
@@ -60,6 +61,7 @@ Risk Notes
 | New website SEO | `PLAYBOOK.md` | 01, 02, 03, 11, 12, 85 |
 | Existing audit | `PLAYBOOK.md` | 13, 23, 38, 57, 59, 82, 95 |
 | Astro/static | `ASTRO_SEO_PLAYBOOK.md` | 28, 58, 82 |
+| Next.js frontend | `NEXTJS_SEO_PLAYBOOK.md` | 02, 12, 58, 82 |
 | Shopify/ecommerce | `SHOPIFY_SEO_PLAYBOOK.md` | 04, 26, 30, 50, 69, 89 |
 | Local business | `LOCAL_BUSINESS_SEO_PLAYBOOK.md` | 08, 49, 56 |
 | Algorithm update | `SEARCH_ENGINE_ALGORITHM_BRIEF.md` | `SEARCH_ENGINE_SOURCE_INDEX.md`, `ALGORITHM_UPDATE_LOG.md` |
@@ -169,6 +171,17 @@ Reject schema spam.
 - LCP image not lazy-loaded.
 - Content collections validate frontmatter.
 - Sitemap/robots generated correctly.
+
+### Next.js
+
+- Use App Router Metadata API or Pages Router `next/head` correctly.
+- Public SEO routes should render meaningful HTML.
+- Prefer SSG/ISR for stable public pages; SSR only when request-time data is needed.
+- Do not hide primary content behind client-only fetch.
+- Use `app/sitemap.ts` and `app/robots.ts` where applicable.
+- JSON-LD must be available in rendered HTML and match visible content.
+- `next/image` LCP/hero images should not be lazy-loaded.
+- Internal navigation should use crawlable links / `next/link`.
 
 ### Shopify
 

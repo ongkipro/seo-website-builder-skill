@@ -99,6 +99,21 @@ Track changes to `/home/fantastico/Documents/SEO` before it becomes an active sk
 - broken local links: clean
 - unfinished-marker sweep: clean
 
+## 2026-06-30 — Added Next.js SEO Playbook
+
+### Added
+
+- `references/NEXTJS_SEO_PLAYBOOK.md`
+
+### Changed
+
+- Updated `SKILL.md` to route Next.js frontend tasks.
+- Updated `COMPACT_SKILL_REFERENCES.md`, `REFERENCE_MANIFEST.md`, and `README.md`.
+
+### Notes
+
+- Covers App Router Metadata API, `generateMetadata()`, Pages Router `next/head`, `app/sitemap.ts`, `app/robots.ts`, SSG/SSR/ISR decisions, Client Component SEO boundaries, JSON-LD, `next/image`, and crawlable navigation.
+
 ## 2026-06-30 — Added Page Completeness Formula
 
 ### Added

@@ -30,6 +30,7 @@ Prefer official search engine/platform documentation and existing project data. 
 | Task | Read |
 | --- | --- |
 | Astro/static/Cloudflare site | [Astro SEO Playbook](references/ASTRO_SEO_PLAYBOOK.md) |
+| Next.js frontend/App Router/Pages Router site | [Next.js SEO Playbook](references/NEXTJS_SEO_PLAYBOOK.md) |
 | Shopify product/collection/listing/feed | [Shopify SEO Playbook](references/SHOPIFY_SEO_PLAYBOOK.md) |
 | Local/service business | [Local Business SEO Playbook](references/LOCAL_BUSINESS_SEO_PLAYBOOK.md) |
 | Algorithm/update review | [Search Engine Algorithm Brief](references/SEARCH_ENGINE_ALGORITHM_BRIEF.md), [Source Index](references/SEARCH_ENGINE_SOURCE_INDEX.md), [Algorithm Update Log](references/ALGORITHM_UPDATE_LOG.md) |
@@ -42,7 +43,7 @@ Prefer official search engine/platform documentation and existing project data. 
 1. Classify the task: new build, audit, Astro/static, Shopify, local business, ecommerce, programmatic, schema, algorithm update, or launch QA.
 2. Gather inputs: website URL/project path, business model, audience, market/location, conversion goal, stack/CMS, main pages/products, current pain.
 3. Inspect before advising:
-   - local codebase: routes/pages, metadata/layout, sitemap/robots, schema, build scripts
+   - local codebase: routes/pages, metadata/layout, sitemap/robots, schema, build scripts, rendering strategy
    - live site: source HTML, robots/sitemap, canonical, schema, mobile CTA, page experience
 4. For important indexable pages, apply the Page Completeness Formula: purpose, metadata, canonical/robots, social metadata, headings, images, links, schema, sitemap, and measurement.
 5. Produce the output contract.
@@ -104,6 +105,12 @@ Must respect pilot-first workflow, no invented product facts, no fake reviews, k
 Use `references/ASTRO_SEO_PLAYBOOK.md`.
 
 Must enforce static-first public pages, content in initial HTML, smallest client islands, per-route metadata/canonical, valid sitemap/robots, and non-lazy LCP image.
+
+### Next.js
+
+Use `references/NEXTJS_SEO_PLAYBOOK.md`.
+
+Must check App Router/Pages Router metadata, `generateMetadata()`, `app/sitemap.ts`, `app/robots.ts`, SSR/SSG/ISR strategy, client component boundaries, JSON-LD availability in rendered HTML, `next/image` ALT/LCP handling, and crawlable `next/link` navigation.
 
 ### Algorithm Intelligence
 

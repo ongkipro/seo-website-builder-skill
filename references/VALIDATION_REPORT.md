@@ -13,6 +13,7 @@ Validated the documentation pack after adding skill-ready files and integrating 
 - `AUDIT.md`
 - `PLAYBOOK.md`
 - `ASTRO_SEO_PLAYBOOK.md`
+- `NEXTJS_SEO_PLAYBOOK.md`
 - `SHOPIFY_SEO_PLAYBOOK.md`
 - `LOCAL_BUSINESS_SEO_PLAYBOOK.md`
 - `SEO_SKILL_BLUEPRINT.md`
@@ -110,7 +111,7 @@ The pack now has:
 - mode routing
 - output contract
 - hard rules
-- stack/use-case playbooks
+- stack/use-case playbooks including Astro, Next.js, Shopify, and local business
 - templates
 - complete page formula
 - manifest

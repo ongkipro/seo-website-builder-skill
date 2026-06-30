@@ -20,6 +20,7 @@ Plan, build, audit, and maintain SEO-ready websites for **Google**, **Bing**, **
 [![Pinterest](https://img.shields.io/badge/Pinterest-BD081C?style=flat-square&logo=pinterest&logoColor=white)](#search-engines--discovery-surfaces)
 [![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=flat-square&logo=shopify&logoColor=white)](#website-platforms)
 [![Astro](https://img.shields.io/badge/Astro-FF5D01?style=flat-square&logo=astro&logoColor=white)](#website-platforms)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)](#website-platforms)
 
 <br />
 
@@ -65,7 +66,7 @@ It is not a keyword checklist. It is a structured SEO operating system for:
 - planning SEO architecture before development
 - generating metadata and schema plans
 - handling sitemap, robots, canonical, and noindex decisions
-- improving Astro/static, Shopify/ecommerce, and local business websites
+- improving Astro/static, Next.js frontend, Shopify/ecommerce, and local business websites
 - controlling programmatic SEO quality
 - reviewing algorithm updates from official or trusted sources
 
@@ -126,6 +127,7 @@ If your tool does not auto-discover skills, you can still point the agent to `SK
 | Platform / site type | What the skill handles |
 | --- | --- |
 | **Astro/static sites** | static-first SEO, metadata, sitemap, robots, schema, Core Web Vitals |
+| **Next.js frontend** | App Router metadata, Pages Router head tags, SSG/SSR/ISR, sitemap/robots, JSON-LD, client component boundaries |
 | **Shopify/ecommerce** | product/collection SEO, Product schema, image ALT, listing safety, feed hygiene |
 | **Local business** | NAP consistency, GBP alignment, LocalBusiness/Service schema, location-page quality |
 | **Programmatic SEO** | page quality gates, duplicate control, crawl budget, pruning, refresh workflows |
@@ -251,6 +253,7 @@ Validate with QA checklist
 2. `references/PLAYBOOK.md`
 3. one task-specific reference:
    - `ASTRO_SEO_PLAYBOOK.md`
+   - `NEXTJS_SEO_PLAYBOOK.md`
    - `SHOPIFY_SEO_PLAYBOOK.md`
    - `LOCAL_BUSINESS_SEO_PLAYBOOK.md`
    - `SEARCH_ENGINE_ALGORITHM_BRIEF.md`
@@ -314,6 +317,13 @@ Use seo-website-builder to audit this Astro website before launch.
 Check metadata, sitemap, robots, canonical, schema, internal links, and Core Web Vitals risks.
 ```
 
+### Audit a Next.js frontend
+
+```txt
+Use seo-website-builder to audit this Next.js frontend.
+Check App Router metadata, canonical URLs, sitemap.ts, robots.ts, JSON-LD, rendered HTML, client component boundaries, next/image usage, and internal links.
+```
+
 ### Optimise Shopify listings safely
 
 ```txt
@@ -354,6 +364,7 @@ seo-website-builder-skill/
     ├── COMPACT_SKILL_REFERENCES.md
     ├── PLAYBOOK.md
     ├── ASTRO_SEO_PLAYBOOK.md
+    ├── NEXTJS_SEO_PLAYBOOK.md
     ├── SHOPIFY_SEO_PLAYBOOK.md
     ├── LOCAL_BUSINESS_SEO_PLAYBOOK.md
     ├── SEARCH_ENGINE_ALGORITHM_BRIEF.md
@@ -376,6 +387,7 @@ seo-website-builder-skill/
 | `COMPACT_SKILL_REFERENCES.md` | Fast default reference for agents |
 | `PLAYBOOK.md` | Daily SEO operating workflow |
 | `ASTRO_SEO_PLAYBOOK.md` | Astro/static SEO implementation rules |
+| `NEXTJS_SEO_PLAYBOOK.md` | Next.js App Router / Pages Router frontend SEO |
 | `SHOPIFY_SEO_PLAYBOOK.md` | Shopify product, collection, listing, and feed SEO |
 | `LOCAL_BUSINESS_SEO_PLAYBOOK.md` | Local business SEO, NAP, GBP, LocalBusiness schema |
 | `SEARCH_ENGINE_ALGORITHM_BRIEF.md` | Multi-engine algorithm/discovery model |

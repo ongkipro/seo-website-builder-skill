@@ -29,6 +29,7 @@ Manifest ini memetakan semua file penting di `/home/fantastico/Documents/SEO` ag
 | File | Use case |
 | --- | --- |
 | `ASTRO_SEO_PLAYBOOK.md` | Astro/static/Cloudflare site |
+| `NEXTJS_SEO_PLAYBOOK.md` | Next.js frontend/App Router/Pages Router SEO |
 | `SHOPIFY_SEO_PLAYBOOK.md` | Shopify product, collection, listing, feed |
 | `LOCAL_BUSINESS_SEO_PLAYBOOK.md` | Local/service business, GBP alignment, NAP, LocalBusiness schema |
 
@@ -96,7 +97,7 @@ The following duplicate export files were converted to redirect stubs:
 
 1. `PLAYBOOK.md`
 2. `03 Information Architecture`
-3. stack/use-case playbook
+3. stack/use-case playbook (`ASTRO_SEO_PLAYBOOK.md`, `NEXTJS_SEO_PLAYBOOK.md`, `SHOPIFY_SEO_PLAYBOOK.md`, etc.)
 4. `12 Schema and Structured Data`
 5. `85 Final SEO OS Completeness Checklist`
 
