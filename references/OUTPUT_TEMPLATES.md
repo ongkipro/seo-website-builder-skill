@@ -1,6 +1,6 @@
 # SEO Output Templates
 
-Template siap pakai untuk audit, build plan, dan implementasi SEO.
+Ready-to-use templates for SEO audits, build plans, schema QA, metadata planning, and implementation notes.
 
 ## 1. Full SEO Audit Template
 

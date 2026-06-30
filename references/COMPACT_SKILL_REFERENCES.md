@@ -1,6 +1,6 @@
 # Compact Skill References
 
-Purpose: versi ringkas untuk calon skill `seo-website-builder`. File ini dibuat agar skill tidak perlu memuat 100+ dokumen setiap kali dipakai.
+Purpose: compact default reference for the `seo-website-builder` skill. This file keeps the skill lightweight so agents do not need to load large reference sets for every task.
 
 Last updated: 2026-06-30
 

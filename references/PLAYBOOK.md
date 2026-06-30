@@ -1,219 +1,221 @@
-# SEO OS Playbook Harian
+# SEO OS Daily Playbook
 
-Playbook ini adalah versi operasional ringkas dari SEO Knowledge Base. Pakai ini saat membangun, mengaudit, atau memperbaiki website agar tidak tenggelam di 100+ modul referensi.
+This is the operational daily playbook for `seo-website-builder`. Use it when building, auditing, or improving websites without loading the full deep SEO knowledge base.
 
-## Prinsip Utama
+## Core principle
 
-SEO yang bagus bukan sekadar keyword. Website harus:
+SEO is not just keywords. A website must be:
 
-1. bisa dicrawl
-2. bisa dirender
-3. bisa dipahami
-4. layak diindex
-5. menjawab search intent
-6. membangun trust
-7. punya internal linking jelas
-8. siap untuk AI-search / answer surfaces
-9. terukur performanya
-10. menghasilkan outcome bisnis
+1. crawlable
+2. renderable
+3. understandable
+4. index-worthy
+5. intent-matched
+6. trustworthy
+7. internally linked
+8. ready for AI-search / answer surfaces
+9. measurable
+10. commercially useful
 
-## Multi-Engine Baseline
+## Multi-engine baseline
 
-Pakai baseline ini untuk Google, Bing, Yandex, Pinterest, dan discovery surfaces lain:
-
-| Surface | Prioritas |
+| Surface | Priority |
 | --- | --- |
 | Google | helpful content, crawl/index, canonical, structured data, page experience, AI feature eligibility |
-| Bing | XML sitemap, true `lastmod`, IndexNow, Bing Webmaster Tools, crawlability |
+| Bing | XML sitemap, accurate `lastmod`, IndexNow, Bing Webmaster Tools, crawlability |
 | Yandex | quality, security, mobile convenience, site region, Yandex Webmaster/Metrica diagnostics |
-| Pinterest | high-quality vertical visuals, claimed website, descriptive Pin text, trend/seasonal relevance, landing-page match |
+| Pinterest | high-quality vertical visuals, claimed website, descriptive Pin text, seasonal/trend relevance, landing-page match |
 | AI Search | indexed/snippet-eligible pages, clear passages, entity clarity, source trust, fresh accurate data |
 
 Default rule: optimise for users and technical clarity first, then add platform-specific signals without creating spam.
 
-## Alur Kerja Standar
+## Standard workflow
 
-### 1. Definisikan konteks bisnis
+### 1. Define business context
 
-Wajib jawab:
+Answer:
 
-- bisnis apa?
-- target user siapa?
-- area layanan / market mana?
-- tujuan utama: lead, sales, booking, signup, traffic, authority?
-- halaman uangnya apa?
+- What is the business?
+- Who is the target user?
+- What market/location is being served?
+- What is the primary goal: leads, sales, bookings, signups, traffic, authority?
+- Which pages generate business value?
 
-### 2. Buat search intent map
+### 2. Build a search intent map
 
-Kelompokkan query menjadi:
-
-| Intent | Contoh | Page Type |
+| Intent | Example | Page type |
 | --- | --- | --- |
-| Brand | nama brand | Homepage / About |
-| Transactional | beli produk X | Product / Service page |
+| Brand | brand name | Homepage / About |
+| Transactional | buy product X | Product / Service page |
 | Commercial investigation | best X, X vs Y | Category / Comparison |
-| Local | jasa X dekat saya | Location / Service-area page |
-| Informational | cara memilih X | Guide / Blog |
-| Trust | review, testimoni, legal | Review / About / Policy |
+| Local | service near me | Location / Service-area page |
+| Informational | how to choose X | Guide / Blog |
+| Trust | reviews, testimonials, policies | Review / About / Policy |
 
-### 3. Buat page type map
+### 3. Build a page type map
 
-Setiap halaman harus punya alasan eksis:
+Every page must support at least one of:
 
 - traffic
 - conversion
 - trust
 - crawl path
 - topical authority
-- support page uang
+- support for a money page
 
-Kalau tidak memenuhi salah satu, pertimbangkan `noindex`, gabungkan, atau jangan dibuat.
+If not, consider merging it, noindexing it, or not creating it.
 
-### 4. Tentukan URL architecture
+### 4. Define URL architecture
 
-Pola aman:
+Safe patterns:
 
 ```txt
 /
-/tentang/
-/kontak/
-/layanan/
-/layanan/nama-layanan/
-/produk/
-/produk/nama-produk/
-/kategori/nama-kategori/
-/blog/judul-artikel/
-/lokasi/nama-kota/
+/about/
+/contact/
+/services/
+/services/service-name/
+/products/
+/products/product-name/
+/categories/category-name/
+/blog/article-title/
+/locations/city-name/
 ```
 
-Aturan:
+Rules:
 
-- slug pendek, deskriptif, lowercase
-- jangan ganti URL tanpa redirect
-- hindari parameter indexable kecuali sengaja
-- canonical harus konsisten
+- short, descriptive, lowercase slugs
+- do not change URLs without redirects
+- avoid indexable parameters unless intentional
+- canonical rules must be consistent
 
-### 5. Tentukan index rules
+### 5. Define index rules
 
 | Page | Default |
 | --- | --- |
 | Homepage | index |
-| Product/service utama | index |
-| Category/collection unik | index |
-| Blog helpful | index |
+| Primary product/service page | index |
+| Unique category/collection | index |
+| Helpful blog/guide | index |
 | Thank-you page | noindex |
-| Cart/checkout/search internal | noindex |
-| Filter/facet tipis | noindex/canonical |
-| Duplikat lokasi tanpa unique value | noindex/gabung |
+| Cart/checkout/internal search | noindex |
+| Thin filter/facet page | noindex/canonical |
+| Duplicate location page without unique value | noindex/merge |
 
-### 6. Buat template SEO per halaman
+### 6. Create per-page SEO templates
 
-Setiap halaman indexable wajib punya:
+Every indexable page needs:
 
-- title unik
-- meta description unik
-- canonical URL
-- H1 tunggal dan relevan
-- intro yang menjawab intent
-- body content yang cukup membantu
-- internal links ke halaman terkait
-- CTA jelas
-- schema bila eligible
+- unique title
+- unique meta description
+- absolute canonical URL
+- one relevant H1
+- intro that answers intent
+- helpful body content
+- internal links
+- clear CTA
+- eligible schema where appropriate
 
 ### 7. Internal linking plan
 
-Minimal:
+Minimum:
 
-- homepage → kategori/layanan utama
-- kategori → produk/subkategori/guide
-- produk → kategori, related products, FAQ
-- artikel → halaman uang + artikel terkait
-- footer → halaman trust/legal/kontak
-- breadcrumbs → semua halaman dalam hierarchy
+- homepage → primary categories/services
+- category → products/subcategories/guides
+- product → category, related products, FAQ/trust
+- article → money pages and related content
+- footer → trust/legal/contact pages
+- breadcrumbs → hierarchical pages
 
 ### 8. Structured data plan
 
-Gunakan hanya schema yang benar-benar merepresentasikan konten terlihat.
+Use schema only when it represents visible, real content.
 
-Umum:
+Common types:
 
 - Organization / LocalBusiness
 - WebSite
 - BreadcrumbList
-- Product
-- Offer
-- AggregateRating / Review jika valid
+- Product / Offer
+- AggregateRating / Review if real and visible
 - Article / BlogPosting
-- FAQPage jika FAQ terlihat di halaman
+- FAQPage if FAQ is visible on the page
+- Service for service pages
 
-### 9. Technical QA sebelum launch
+### 9. Technical QA before launch
 
-Checklist minimum:
+Minimum checks:
 
-- halaman penting return 200
-- broken links 0
-- sitemap hanya URL canonical-indexable
-- robots tidak memblokir asset penting
-- canonical benar
-- title/meta unik
-- mobile layout aman
-- LCP image tidak lazy-loaded
-- 404 benar
-- redirect 301 bila URL berubah
-- Search Console siap
+- important pages return 200
+- broken internal links = 0
+- sitemap contains canonical-indexable URLs only
+- robots does not block important assets
+- canonical URLs are correct
+- title/meta are unique
+- mobile layout is usable
+- LCP image is not lazy-loaded
+- 404 page returns 404
+- permanent URL changes use 301 redirects
+- Search Console and/or platform webmaster tools are ready
 
 ### 10. Measurement plan
 
-Pasang dan pantau:
+Track:
 
 - Google Search Console
 - Bing Webmaster Tools
-- analytics event untuk CTA
+- analytics CTA events
 - conversion tracking
 - top queries
 - indexed pages
 - crawl/index errors
-- CWV
-- halaman dengan impressions tinggi CTR rendah
-- halaman traffic turun
+- Core Web Vitals
+- high-impression low-CTR pages
+- traffic drops by page type
 - Bing sitemap/indexing status
-- IndexNow submission result untuk situs yang sering berubah
-- Yandex Webmaster/Metrica jika target market relevan
-- Pinterest analytics untuk visual/content commerce
+- IndexNow results for frequently changing sites
+- Yandex Webmaster/Metrica if relevant
+- Pinterest analytics for visual/content commerce
 
-## Output Wajib dari AI Agent
+## Required AI output
 
-Saat diminta SEO, AI harus menghasilkan:
+For substantial SEO tasks, return:
 
 ```txt
 Critical Assessment
+Evidence / Source Confidence
+Missing Inputs / Assumptions
 Search Intent Map
 Page Type Map
 URL Structure
-Index/Canonical Rules
+Index + Canonical Rules
 Metadata Pattern
 Schema Plan
 Internal Linking Plan
 Content Requirements
-Technical QA Checklist
+Multi-Engine Notes
+Technical Implementation
+Complete Page Formula Checks
+QA / Validation Checklist
 Measurement Plan
+Risk Notes
 ```
 
-## Stop Rules
+## Stop rules
 
-Jangan lanjut build bila:
+Stop or ask before continuing if:
 
-- tujuan bisnis belum jelas
-- page map belum ada
-- index/canonical belum jelas
-- halaman dibuat hanya demi keyword
-- konten generik tanpa pengalaman/kepercayaan
-- schema menandai konten yang tidak terlihat
-- tidak ada plan Search Console / analytics
+- business goal is unclear
+- page map is unclear
+- index/canonical rules are unclear
+- the page exists only for keyword capture
+- content would be generic, fake, or misleading
+- schema would mark invisible content
+- there is no Search Console/analytics plan
 
-## Referensi Resmi Prioritas
+## Official source priority
 
-Gunakan sumber resmi lebih dulu:
+Prefer official sources first:
 
 - Google Search Essentials
 - Google SEO Starter Guide
@@ -227,9 +229,9 @@ Gunakan sumber resmi lebih dulu:
 - Yandex Webmaster documentation
 - Pinterest Business / Help / Policy docs
 
-Industry sources seperti Ahrefs/Semrush/Moz/Search Engine Land boleh dipakai untuk taktik dan contoh, bukan sebagai klaim bobot algoritma rahasia.
+Use industry sources for examples and tactics, not as secret ranking-weight claims.
 
-Untuk update algoritma, cek dan catat di:
+For algorithm updates, check and record:
 
 - `SEARCH_ENGINE_ALGORITHM_BRIEF.md`
 - `SEARCH_ENGINE_SOURCE_INDEX.md`

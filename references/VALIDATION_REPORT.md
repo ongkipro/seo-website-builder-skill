@@ -1,40 +1,33 @@
-# SEO Documentation Pack Validation Report
+# SEO Skill Validation Report
 
 Date: 2026-06-30
-Path: `/home/fantastico/Documents/SEO`
+Scope: public `seo-website-builder` Agent Skill repository.
 
-## Scope
+## Files validated
 
-Validated the documentation pack after adding skill-ready files and integrating useful patterns from existing local skills.
-
-## New / Updated Skill-Ready Files
-
+- `SKILL.md`
 - `README.md`
-- `AUDIT.md`
+- `LICENSE`
+- `COMPACT_SKILL_REFERENCES.md`
 - `PLAYBOOK.md`
+- `PAGE_COMPLETENESS_FORMULA.md`
 - `ASTRO_SEO_PLAYBOOK.md`
 - `NEXTJS_SEO_PLAYBOOK.md`
 - `SHOPIFY_SEO_PLAYBOOK.md`
 - `LOCAL_BUSINESS_SEO_PLAYBOOK.md`
-- `SEO_SKILL_BLUEPRINT.md`
-- `SKILL_DRAFT.md`
-- `REFERENCE_MANIFEST.md`
-- `OUTPUT_TEMPLATES.md`
-- `PAGE_COMPLETENESS_FORMULA.md`
-- `VALIDATION_REPORT.md`
 - `SEARCH_ENGINE_ALGORITHM_BRIEF.md`
 - `SEARCH_ENGINE_SOURCE_INDEX.md`
 - `ALGORITHM_UPDATE_LOG.md`
-- `COMPACT_SKILL_REFERENCES.md`
+- `OUTPUT_TEMPLATES.md`
 - `TEST_CASES.md`
-- `PROMOTION_CHECKLIST.md`
+- `REFERENCE_MANIFEST.md`
 - `CHANGELOG.md`
 
-## Existing Skills Reviewed
+## Existing skill patterns integrated
 
-### `seo-local-business`
+### Local business SEO
 
-Useful patterns integrated:
+Integrated patterns:
 
 - required/optional business info matrix
 - local head tag template
@@ -45,14 +38,14 @@ Useful patterns integrated:
 - validation errors
 - phone formatting patterns
 
-Integrated into:
+Applied to:
 
 - `LOCAL_BUSINESS_SEO_PLAYBOOK.md`
-- `SKILL_DRAFT.md`
+- `SKILL.md`
 
-### `shopify-listing`
+### Shopify listing SEO
 
-Useful patterns integrated:
+Integrated patterns:
 
 - scan → pilot → approval → batch workflow
 - listing limits for title/meta/handle/ALT
@@ -61,14 +54,14 @@ Useful patterns integrated:
 - image ALT patterns
 - final QA target
 
-Integrated into:
+Applied to:
 
 - `SHOPIFY_SEO_PLAYBOOK.md`
-- `SKILL_DRAFT.md`
+- `SKILL.md`
 
-### `astro-development`
+### Astro development SEO
 
-Useful patterns integrated:
+Integrated patterns:
 
 - project classification
 - static-first rendering strategy
@@ -76,74 +69,64 @@ Useful patterns integrated:
 - content in initial HTML
 - Astro-native SEO defaults
 
-Integrated into:
+Applied to:
 
 - `ASTRO_SEO_PLAYBOOK.md`
-- `SKILL_DRAFT.md`
+- `SKILL.md`
 
-## Validation Checks
+### Next.js frontend SEO
 
-### Relative links
+Integrated patterns:
 
-Status: **PASS**
+- App Router Metadata API
+- `generateMetadata()` for dynamic routes
+- Pages Router `next/head`
+- `app/sitemap.ts` and `app/robots.ts`
+- SSG/SSR/ISR rendering decisions
+- Client Component SEO boundaries
+- JSON-LD in rendered HTML
+- `next/image` ALT/LCP handling
+- crawlable `next/link` navigation
 
-No broken local markdown links detected after latest edits.
+Applied to:
 
-### Placeholder sweep
+- `NEXTJS_SEO_PLAYBOOK.md`
+- `SKILL.md`
 
-Status: **PASS**
+## Validation checks
 
-No unfinished-marker strings detected in content files.
+| Check | Status |
+| --- | --- |
+| `SKILL.md` exists | PASS |
+| required frontmatter exists | PASS |
+| references folder exists | PASS |
+| core references exist | PASS |
+| local markdown links | PASS |
+| obvious secret/token scan | PASS |
+| dry-run test cases | PASS |
+| public README | PASS |
+| English public docs | PASS |
 
-### Duplicate handling
+## Dry-run coverage
 
-Status: **PASS**
+The skill has dry-run scenarios for:
 
-Previously duplicated Etsy/eBay export files were converted to redirect stubs while retaining canonical originals.
+- local business company profile
+- Astro static website
+- Next.js frontend SEO
+- Shopify product listing optimisation
+- ecommerce category SEO
+- existing website SEO audit
+- algorithm update review
+- Pinterest visual discovery page
+- programmatic SEO quality control
 
-### Skill readiness
+## Public safety statement
 
-Status: **READY FOR DOCUMENT-LEVEL USE**
+The public skill repository intentionally contains no private credentials, API keys, auth sessions, client secrets, or private customer data.
 
-The pack now has:
+## Final verdict
 
-- load order
-- mode routing
-- output contract
-- hard rules
-- stack/use-case playbooks including Astro, Next.js, Shopify, and local business
-- templates
-- complete page formula
-- manifest
-- validation report
-- multi-engine algorithm brief
-- official/trusted source index
-- algorithm update log
-- compact skill reference
-- pre-promotion test cases
-- promotion checklist
-- changelog
+Status: **production-ready public Agent Skill**
 
-Status for actual CLI skill promotion: **NOT YET PROMOTED**
-
-Reason: user requested to keep everything inside `Documents/SEO` for now.
-
-## Recommended Next Validation Before Promotion
-
-Before creating an actual skill folder, test this pack against at least:
-
-1. one Astro/static website
-2. one Shopify listing/store SEO task
-3. one local business/company profile task
-
-For each test, record:
-
-- files read
-- output generated
-- issues found
-- validation result
-- what should be changed in the playbooks
-
-## Final Verdict
-
-The folder is now a coherent, skill-ready SEO documentation pack. It can be used manually today and can be promoted into an AI skill later with minimal restructuring.
+The skill is suitable for AI coding agents that support Agent Skills-style workflows or manual skill loading.

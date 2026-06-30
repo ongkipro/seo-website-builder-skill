@@ -1,51 +1,51 @@
-# Astro SEO Implementation Playbook
+# Astro SEO Playbook
 
-Untuk project Astro/static/Cloudflare site. Disusun dari SEO OS + referensi Google-first di `~/Documents/seo-research-google/astro-static-seo-playbook.md`.
+Purpose: SEO implementation and audit rules for Astro, static HTML, and Cloudflare-hosted content sites.
 
-## Target
+## Goal
 
-Astro harus menghasilkan halaman yang:
+Astro should produce pages where:
 
-- konten utama sudah ada di HTML awal
-- metadata unik per halaman
-- sitemap canonical-only
-- robots benar
-- Core Web Vitals ringan
-- schema valid dan sesuai konten terlihat
+- primary content exists in the initial HTML
+- metadata is unique per page
+- sitemap contains canonical-indexable URLs only
+- robots rules are correct
+- Core Web Vitals remain lightweight
+- schema is valid and matches visible content
 
-## Project Classification
+## Project classification
 
-Sebelum implementasi, klasifikasikan project:
+Before implementation, classify the project:
 
 | Lane | Pattern |
 | --- | --- |
 | Content site | static pages, blog, docs, company profile |
-| Hybrid site | mostly static + forms/API/auth/dashboard kecil |
-| App-like site | banyak state/dynamic UI; Astro mungkin bukan pilihan utama |
+| Hybrid site | mostly static plus forms, API routes, auth, or a small dashboard |
+| App-like site | many dynamic stateful UI screens; Astro may not be the best fit |
 
-SEO default: pilih static HTML dulu. Tambahkan server/API/islands hanya jika benar-benar perlu.
+SEO default: choose static HTML first. Add server behavior or islands only when needed.
 
-## Rendering Strategy
+## Rendering strategy
 
-Urutan default:
+Default order:
 
-1. static generation untuk public SEO pages
-2. selective server/API routes untuk form atau data dinamis
-3. framework islands hanya untuk interaksi kecil
-4. full server rendering hanya jika halaman butuh request-time data
+1. static generation for public SEO pages
+2. selective server/API routes for forms or dynamic data
+3. framework islands only for small interactive pieces
+4. full server rendering only when request-time data is required
 
 Rules:
 
-- jangan jadikan semua route SSR hanya karena ada satu form
-- jangan render konten utama via client JS
-- hydrate hanya island terkecil yang butuh interaksi
-- navigation dan internal links harus tetap crawlable `<a href>`
+- do not make every route SSR just because the site has one form
+- do not render primary content exclusively with client-side JavaScript
+- hydrate only the smallest interactive island
+- navigation and internal links must remain crawlable `<a href>` links
 
-## Checklist Setup
+## Setup checklist
 
-### 1. Base layout SEO
+### 1. Base SEO layout
 
-Setiap layout harus menerima props:
+Every layout should accept:
 
 ```ts
 title
@@ -57,7 +57,7 @@ breadcrumbs
 schema
 ```
 
-Output wajib:
+Required output:
 
 ```html
 <title>...</title>
@@ -70,7 +70,7 @@ Output wajib:
 <meta name="twitter:card" content="summary_large_image">
 ```
 
-Jika `noindex=true`:
+If `noindex=true`:
 
 ```html
 <meta name="robots" content="noindex,follow">
@@ -78,27 +78,27 @@ Jika `noindex=true`:
 
 ### 2. Sitemap
 
-Sitemap harus:
+The sitemap should:
 
-- hanya memasukkan URL canonical
-- tidak memasukkan checkout, thanks, search, filter tipis, policy low-value jika memang noindex
-- memakai absolute URL
-- include `lastmod` jika valid
+- include only canonical URLs
+- exclude checkout, thank-you, internal search, thin filters, and noindex policy pages
+- use absolute URLs
+- include `lastmod` only when accurate
 
-Pattern aman:
+Safe pattern:
 
 ```txt
 /
-/tentang/
-/kontak/
-/layanan/
-/layanan/[slug]/
+/about/
+/contact/
+/services/
+/services/[slug]/
 /blog/[slug]/
 ```
 
 ### 3. Robots
 
-Robots minimal:
+Minimum robots file:
 
 ```txt
 User-agent: *
@@ -106,13 +106,11 @@ Allow: /
 Sitemap: https://domain.com/sitemap.xml
 ```
 
-Blokir hanya jika benar-benar perlu. Jangan blokir file JS/CSS penting.
+Block only when necessary. Do not block important JS/CSS/image assets.
 
 ### 4. Content collections
 
-Untuk blog/content:
-
-Frontmatter wajib:
+For blog/content sites, required frontmatter:
 
 ```yaml
 title:
@@ -125,96 +123,95 @@ canonical:
 noindex: false
 ```
 
-Validasi:
+Validate:
 
-- title unik
-- description unik
-- slug stabil
-- date akurat
-- author jelas
+- title is unique
+- description is unique
+- slug is stable
+- dates are accurate
+- author/entity is clear
 
 ### 5. Performance SEO
 
-Astro advantage harus dipertahankan:
+Preserve Astro's advantage:
 
-- minimalkan client islands
-- jangan lazy-load hero/LCP image
-- preload LCP image bila perlu
-- pakai WebP/AVIF
-- width/height image selalu ada
-- font display strategy aman
-- CSS critical tidak bloat
-- hindari global client JS besar
-- gunakan components `.astro` untuk UI statis
+- minimise client islands
+- do not lazy-load hero/LCP image
+- preload LCP image when useful
+- use WebP/AVIF where appropriate
+- always set image width/height or stable dimensions
+- keep font loading safe
+- avoid global heavy client JavaScript
+- use `.astro` components for static UI
 
-Island boleh untuk:
+Islands are appropriate for:
 
-- mobile menu
-- tabs/accordion ringan
-- forms dengan client validation
+- mobile menus
+- tabs/accordions
+- forms with client validation
 - search/filter widgets
-- charts/rich interaction
+- charts/rich interactions
 
-Jika bukan interaktif, jangan jadikan React/Vue/Svelte island.
+If it is not interactive, do not make it a React/Vue/Svelte island.
 
-### 6. Schema Astro
+### 6. Schema
 
-Schema umum:
+Common schema:
 
 - Organization / LocalBusiness site-wide
-- BreadcrumbList per halaman hierarchy
-- Article untuk blog
-- Product untuk ecommerce
-- FAQPage hanya jika FAQ terlihat
+- BreadcrumbList for hierarchical pages
+- Article for blog posts
+- Product for ecommerce pages
+- FAQPage only if FAQ is visible
 
-Inject JSON-LD sebagai raw script dan validasi di Rich Results Test.
+Inject JSON-LD as a script and validate with rich result/schema tools.
 
-### 7. QA Commands
+## QA commands
 
 ```bash
 npm run build
 npm run check
 ```
 
-Lalu cek output:
+Inspect output:
 
 ```bash
 rg '<title>|canonical|description|robots' dist -n
 rg 'application/ld\+json' dist -n
 ```
 
-Cek manual:
+Manual checks:
 
 - `/sitemap.xml`
 - `/robots.txt`
-- 404 page
+- 404 page and status
 - canonical host
 - mobile layout
 - Lighthouse/PageSpeed
 
-## Anti-pattern Astro
+## Anti-patterns
 
-- semua konten dirender client-side
-- meta tag statis sama di semua halaman
-- sitemap memasukkan noindex URL
-- canonical mengarah ke homepage semua
-- lazy-load hero image
-- internal link pakai button tanpa href
-- slug berubah saat build
-- semua halaman dibuat SSR tanpa kebutuhan
-- framework island dipakai untuk UI statis
-- content collection tanpa validasi frontmatter
-- 404 statis tapi deployment mengembalikan 200
+- all content rendered client-side
+- same meta tags on every page
+- sitemap includes noindex URLs
+- every canonical points to homepage
+- hero/LCP image lazy-loaded
+- internal navigation uses buttons without `href`
+- slugs change between builds
+- all pages are SSR without need
+- framework islands used for static UI
+- content collections lack frontmatter validation
+- 404 page returns 200 in deployment
 
-## Final Gate
+## Final gate
 
-Sebuah Astro site belum SEO-ready sampai:
+An Astro site is not SEO-ready until:
 
-- build sukses
-- sitemap valid
-- robots valid
-- setiap indexable page punya title/meta/canonical unik
-- schema valid
-- no broken internal links
-- HTML awal berisi konten utama
-- Search Console siap setelah deploy
+- build passes
+- sitemap is valid
+- robots is valid
+- every indexable page has unique title/meta/canonical
+- schema validates
+- internal links are not broken
+- primary content exists in initial HTML
+- Search Console is ready after deployment

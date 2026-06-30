@@ -1,104 +1,104 @@
 # Local Business SEO Playbook
 
-Untuk company profile, jasa lokal, trades, klinik, toko fisik, pesantren/sekolah, restoran, dan bisnis yang melayani area tertentu. Disusun dari SEO OS + `~/Documents/seo-research-google/local-business-seo-playbook.md`.
+Purpose: SEO implementation and audit rules for local businesses, service businesses, schools, clinics, restaurants, physical stores, and organisations serving a defined area.
 
-## Target
+## Goal
 
-Website local business harus membantu Google dan user memahami:
+A local business website must help users and search engines understand:
 
-- siapa bisnisnya
-- jasa/produk apa yang ditawarkan
-- lokasi/area layanan
-- bukti kepercayaan
-- cara kontak
-- apakah bisnis aktif dan nyata
+- who the business is
+- what services/products it offers
+- where it operates
+- why it can be trusted
+- how to contact it
+- whether it is active and real
 
-## Input yang Harus Dikumpulkan
+## Required inputs
 
-Jangan menebak data bisnis. Ambil dari website existing, Google Business Profile, dokumen user, atau tanya user.
+Do not guess business data. Extract it from the existing website, Google Business Profile, official documents, or ask the user.
 
-| Required | Optional / Recommended |
+| Required | Optional / recommended |
 | --- | --- |
-| Business name | legal name / ABN / NIB / NPWP jika relevan |
+| Business name | legal name / ABN / NIB / NPWP where relevant |
 | Primary service/category | opening hours |
 | City/suburb/service area | social profile URLs |
 | Phone number | price range |
 | Website URL | GPS coordinates |
 | Business description | logo / OG image |
-| Address atau service-area model | accepted payment |
+| Address or service-area model | accepted payment methods |
 | Main CTA | founding date |
 
-## Core Local Ranking Factors
+## Core local ranking model
 
-Berdasarkan Google Business guidance, fokus utama local visibility:
+Based on Google Business guidance, local visibility is strongly related to:
 
-1. relevance — cocok dengan query
-2. distance — kedekatan dengan pencari/area
-3. prominence — reputasi, review, citations, authority
+1. relevance — how well the business matches the query
+2. distance — proximity to the searcher or target area
+3. prominence — reputation, reviews, citations, authority, and entity strength
 
-Website tidak menggantikan Google Business Profile, tapi memperkuat relevance dan prominence.
+A website does not replace a Google Business Profile, but it strengthens relevance and prominence.
 
-## Struktur Website Minimum
+## Minimum site structure
 
 ```txt
 /
-/tentang/
-/layanan/
-/layanan/[nama-layanan]/
-/area-layanan/
-/area-layanan/[kota-atau-suburb]/
-/testimoni/
-/kontak/
-/blog/ atau panduan/
+/about/
+/services/
+/services/[service-name]/
+/service-areas/
+/service-areas/[city-or-suburb]/
+/testimonials/
+/contact/
+/blog/ or /guides/
 ```
 
-Untuk bisnis kecil, jangan bikin ratusan halaman lokasi tipis. Buat hanya area yang punya unique value.
+For small businesses, do not create hundreds of thin city pages. Create only location pages that have unique value.
 
-## Homepage Checklist
+## Homepage checklist
 
-Wajib ada:
+Must include:
 
-- H1 jelas: bisnis + layanan utama + lokasi
-- ringkasan layanan
-- area layanan
-- alamat/NAP
-- CTA telepon/WhatsApp/form
-- bukti trust: review, lisensi, pengalaman, portfolio
-- internal link ke layanan utama
+- clear H1: business + main service + location
+- service summary
+- service area
+- NAP details
+- phone/WhatsApp/form CTA
+- trust proof: reviews, licenses, experience, case studies, portfolio
+- internal links to primary services
 - LocalBusiness/Organization schema
 
-## Service Page Checklist
+## Service page checklist
 
-Setiap layanan utama harus punya halaman sendiri jika ada search demand.
+Create one page per primary service when there is search demand.
 
-Isi minimal:
+Minimum content:
 
-- apa jasanya
-- untuk siapa
-- masalah yang diselesaikan
-- proses kerja
-- harga/mulai dari jika memungkinkan
-- area layanan
+- what the service is
+- who it is for
+- problem it solves
+- process
+- price/range if appropriate
+- service area
 - FAQ
-- bukti hasil/testimoni relevan
-- CTA jelas
+- relevant proof/testimonials
+- clear CTA
 
-## Location / Service Area Pages
+## Location / service-area pages
 
-Halaman lokasi boleh index jika punya unique value:
+A location page is index-worthy only if it has unique value:
 
-- alamat/area spesifik
-- contoh project/case di area tersebut
-- foto lokal/project nyata
-- testimonial lokal
-- rute/konteks wilayah
-- layanan yang tersedia di area itu
+- specific area context
+- real project/case in that area
+- local photos or proof
+- local testimonial
+- route/location context
+- services available in that area
 
-Jangan buat halaman lokasi template copy-paste hanya ganti nama kota.
+Do not create copy-paste city pages that only swap the city name.
 
-## NAP Consistency
+## NAP consistency
 
-Pastikan konsisten di website, GBP, citation, dan social:
+Keep consistent across website, Google Business Profile, citations, and social profiles:
 
 - Name
 - Address
@@ -106,11 +106,9 @@ Pastikan konsisten di website, GBP, citation, dan social:
 - Website
 - Opening hours
 
-Gunakan format telepon lokal benar, misalnya Indonesia `+62...`, Australia `+61...`.
+Use correct international phone format in schema and `tel:` links.
 
-## Head Tags Template
-
-Pattern aman untuk local pages:
+## Head tags template
 
 ```html
 <title>{{PAGE_TITLE}} | {{BUSINESS_NAME}}</title>
@@ -124,7 +122,7 @@ Pattern aman untuk local pages:
 <meta name="twitter:card" content="summary_large_image">
 ```
 
-Optional geo tags jika punya koordinat valid:
+Optional geo tags if coordinates are accurate:
 
 ```html
 <meta name="geo.region" content="{{COUNTRY_REGION}}">
@@ -133,7 +131,7 @@ Optional geo tags jika punya koordinat valid:
 <meta name="ICBM" content="{{LATITUDE}}, {{LONGITUDE}}">
 ```
 
-Title pattern:
+Title patterns:
 
 | Page | Pattern |
 | --- | --- |
@@ -143,7 +141,7 @@ Title pattern:
 | Contact | `Contact Brand | Location` |
 | Location | `Service in City/Suburb | Brand` |
 
-Meta description pattern:
+Meta description patterns:
 
 | Page | Pattern |
 | --- | --- |
@@ -154,7 +152,7 @@ Meta description pattern:
 
 ## Schema
 
-Pilih schema sesuai bisnis:
+Choose the most accurate schema:
 
 - LocalBusiness
 - ProfessionalService
@@ -164,10 +162,10 @@ Pilih schema sesuai bisnis:
 - EducationalOrganization
 - Organization
 - BreadcrumbList
-- FAQPage jika FAQ terlihat
-- Service untuk halaman layanan
+- FAQPage if FAQ is visible
+- Service for service pages
 
-Gunakan subtype lebih spesifik jika tepat:
+Useful subtypes:
 
 | Subtype | Use case |
 | --- | --- |
@@ -182,33 +180,30 @@ Gunakan subtype lebih spesifik jika tepat:
 | AccountingService | accountant |
 | Restaurant | restaurant/cafe |
 | Store | retail |
-| EducationalOrganization | school/pesantren/training |
+| EducationalOrganization | school/boarding school/training organisation |
 | ProfessionalService | generic service |
 
-LocalBusiness minimal:
+LocalBusiness minimal example:
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "...",
-  "url": "...",
-  "telephone": "...",
+  "name": "Business Name",
+  "url": "https://example.com/",
+  "telephone": "+6281234567890",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "...",
-    "addressLocality": "...",
-    "addressRegion": "...",
-    "postalCode": "...",
-    "addressCountry": "..."
-  },
-  "openingHoursSpecification": []
+    "streetAddress": "Street address",
+    "addressLocality": "City",
+    "addressRegion": "Region",
+    "postalCode": "Postal code",
+    "addressCountry": "ID"
+  }
 }
 ```
 
-## Service Schema Template
-
-Untuk halaman layanan:
+## Service schema template
 
 ```json
 {
@@ -222,9 +217,9 @@ Untuk halaman layanan:
 }
 ```
 
-## FAQ Schema Rules
+## FAQ schema rules
 
-Hanya pakai `FAQPage` bila pertanyaan dan jawaban terlihat di halaman.
+Use `FAQPage` only when the questions and answers are visible on the page.
 
 ```json
 {
@@ -243,7 +238,7 @@ Hanya pakai `FAQPage` bila pertanyaan dan jawaban terlihat di halaman.
 }
 ```
 
-## Phone / Region Formatting
+## Phone / region formatting
 
 | Region | Display | Link / Schema |
 | --- | --- | --- |
@@ -252,87 +247,87 @@ Hanya pakai `FAQPage` bila pertanyaan dan jawaban terlihat di halaman.
 | Australia landline | `(02) 4900 1234` | `+61249001234` |
 | Australia mobile | `0412 345 678` | `+61412345678` |
 
-For Australian businesses, include ABN as `taxID` if available.
+For Australian businesses, include ABN as `taxID` when available.
 
-## Google Business Profile Alignment
+## Google Business Profile alignment
 
-Website harus selaras dengan GBP:
+The website should align with GBP:
 
-- nama bisnis sama
-- kategori bisnis cocok
-- URL landing benar
-- nomor telepon sama
-- alamat/jam buka sama
-- foto dan layanan diperbarui
-- review dibalas secara natural
+- same business name
+- matching business category
+- correct landing page URL
+- same phone number
+- same address/opening hours
+- fresh photos and services
+- reviews answered naturally
 
-## Content Plan
+## Content plan
 
-Konten local business terbaik:
+Strong local content includes:
 
-- halaman jasa utama
-- FAQ berdasarkan pertanyaan calon customer
-- panduan biaya / proses / persiapan
-- studi kasus lokal
-- sebelum-sesudah jika relevan
-- artikel edukasi yang mengarah ke service page
+- primary service pages
+- FAQs based on real customer questions
+- pricing/process/preparation guides
+- local case studies
+- before/after examples where relevant
+- educational articles that link to service pages
 
-## Internal Linking
+## Internal linking
 
-- homepage → layanan utama
-- layanan → kontak + area layanan
-- area layanan → layanan relevan
-- blog → layanan uang
-- footer → NAP + kontak + lokasi
-- breadcrumbs aktif
+- homepage → primary services
+- service pages → contact + service area pages
+- service area pages → relevant services
+- blog/guides → money pages
+- footer → NAP + contact + location
+- breadcrumbs active on hierarchical pages
 
-## Anti-pattern Local SEO
+## Anti-patterns
 
-- halaman kota copy-paste
-- alamat palsu / virtual office misleading
-- review palsu
-- schema menandai review yang tidak terlihat
-- tidak ada NAP jelas
-- CTA hanya icon tanpa label
-- website tidak mobile-friendly
-- halaman kontak tanpa alamat/telepon/jam operasional
+- copy-paste city pages
+- fake address or misleading virtual office
+- fake reviews
+- schema for reviews not visible on the page
+- unclear NAP
+- icon-only CTAs without accessible labels
+- poor mobile usability
+- contact page without address/phone/hours when relevant
 
 ## QA
 
-Cek:
+Check:
 
-- NAP konsisten
-- GBP match
+- NAP consistency
+- GBP alignment
 - LocalBusiness schema valid
-- Service schema valid bila dipakai
-- FAQ schema hanya untuk FAQ terlihat
-- mobile CTA bisa diklik
-- map/rute benar
-- phone link pakai `tel:`
-- WhatsApp link benar
-- contact page indexable jika penting
-- privacy/legal page tersedia bila form tracking ada
-- `robots.txt` ada
-- `sitemap.xml` berisi URL canonical-indexable saja
+- Service schema valid if used
+- FAQ schema only for visible FAQs
+- mobile CTA works
+- map/route correct
+- `tel:` link correct
+- WhatsApp link correct
+- contact page indexable if important
+- privacy/legal page present when forms/tracking are used
+- `robots.txt` exists
+- `sitemap.xml` contains canonical-indexable URLs only
 
 Common validation errors:
 
 - missing `@context`
 - missing stable `@id`
-- phone bukan format internasional
-- `areaServed` kosong
-- schema review/rating tanpa review terlihat
-- business address berbeda dengan GBP tanpa alasan jelas
+- phone is not international format
+- empty `areaServed`
+- review/rating schema without visible reviews
+- business address differs from GBP without a clear reason
 
-## Final Gate
+## Final gate
 
-Local site belum SEO-ready sampai:
+A local site is not SEO-ready until:
 
-- homepage menjelaskan layanan + lokasi dalam 5 detik
-- setiap layanan utama punya landing page jelas
-- NAP konsisten
-- GBP selaras
-- schema valid
-- trust proof nyata
-- CTA mudah di mobile
-- tidak ada location doorway pages
+- homepage explains service + location within 5 seconds
+- every primary service has a clear landing page
+- NAP is consistent
+- GBP is aligned
+- schema is valid
+- trust proof is real
+- mobile CTA is easy to use
+- there are no doorway location pages

@@ -1,128 +1,128 @@
-# Shopify SEO Implementation Playbook
+# Shopify SEO Playbook
 
-Untuk Shopify theme, product listing, collection, Liquid, dan Merchant SEO. Disusun dari SEO OS + `~/Documents/seo-research-google/shopify-seo-playbook.md`.
+Purpose: SEO implementation and audit rules for Shopify themes, product listings, collections, Liquid templates, and Merchant/feed hygiene.
 
-## Target
+## Goal
 
-Shopify harus punya:
+A Shopify store should have:
 
-- product pages yang unik dan conversion-aware
-- collection pages yang index-worthy
-- variant/facet control
-- schema Product/Offer valid
-- image ALT dan filename SEO-friendly
-- Merchant Center/feed hygiene
-- internal linking kuat dari collection, related products, dan blog
+- unique product pages that support search and conversion
+- index-worthy collection pages
+- controlled variants/facets
+- valid Product/Offer schema
+- SEO-friendly image ALT and filenames
+- clean Merchant Center/feed data
+- strong internal linking from collections, products, and blog content
 
-## Safe Workflow Untuk Editing Listing
+## Safe workflow for listing edits
 
-Untuk bulk listing/customer-facing changes, jangan langsung batch besar.
+For customer-facing or bulk changes, never batch blindly.
 
-1. Scan produk: title, descriptionHtml, variants, options, SEO fields, tags, category, media ALT.
-2. Pilih 1 produk pilot.
-3. Buat before/after.
-4. Minta approval style dan aturan brand/market.
-5. Baru batch dengan script resume-safe.
-6. Log produk yang sukses/gagal.
-7. Verifikasi hasil akhir.
+1. Scan product titles, `descriptionHtml`, variants, options, SEO fields, tags, category, and media ALT.
+2. Choose one pilot product.
+3. Produce before/after copy.
+4. Ask for approval on style, brand policy, market, and language.
+5. Batch only after approval.
+6. Use resume-safe scripts/logging.
+7. Verify final output.
 
-Hard rule: jangan invent fakta produk. Ambil hanya dari data lama, gambar, spesifikasi valid, atau input user.
+Hard rule: do not invent product facts. Use only existing data, images, verified specifications, or user-provided input.
 
-## Page Types
+## Page types
 
-| Page | Default SEO Rule |
+| Page | Default SEO rule |
 | --- | --- |
-| Homepage | index, brand + category gateway |
-| Product | index jika unik dan tersedia |
-| Collection | index jika punya demand dan unique copy |
-| Blog | index jika helpful dan mendukung topical authority |
+| Homepage | index; brand + category gateway |
+| Product | index if unique and available |
+| Collection | index if it has demand and unique copy |
+| Blog | index if helpful and supports topical authority |
 | Search results | noindex |
 | Cart/checkout/account | noindex |
-| Tag/filter tipis | noindex/canonical |
-| Sold out product | keep index jika demand tinggi + alternatif |
+| Thin tag/filter pages | noindex/canonical |
+| Sold-out product | keep indexed if demand is high and alternatives are shown |
 
-## Product Page Checklist
+## Product page checklist
 
-Wajib:
+Required:
 
-- title produk jelas dan natural
-- meta title unik
-- meta description benefit + intent
-- H1 sama/selaras dengan product title
-- deskripsi produk tidak copy-paste supplier
-- bullets: benefit, spec, use case, compatibility
-- variant jelas
-- price dan availability jelas
-- review/UGC valid jika ada
+- clear natural product title
+- unique SEO title
+- meta description with benefit + intent
+- H1 aligned with product title
+- product description not copied from supplier
+- bullets for benefits, specs, use cases, compatibility
+- clear variants
+- visible price and availability
+- valid review/UGC if present
 - related products
 - breadcrumbs
-- Product schema valid
+- valid Product schema
 
-Listing data limits yang disarankan:
+Suggested listing limits:
 
 | Field | Rule |
 | --- | --- |
-| Product title | ≤70 chars, natural, no keyword spam |
+| Product title | ≤70 chars, natural, no keyword stuffing |
 | SEO title | ≤60 chars, keyword-first, no forced store suffix unless requested |
 | Meta description | ≤155 chars, benefit + differentiator, no CTA spam |
 | Handle | ≤6 keyword words, unique, stable |
 | Image ALT | ≤125 chars, descriptive view/feature label |
-| Tags | clean taxonomy, no junk supplier/origin tags |
+| Tags | clean taxonomy, no supplier/origin junk |
 
 For catalog cleanup:
 
-- remove country/Ships From variants unless operationally needed
+- remove country/Ships From variants unless operationally required
 - keep SKUs unchanged for kept variants
-- relabel option values from codes to human-readable names only when verified
-- remove `Brand Name: NONE`, origin junk, and supplier residue from customer-facing copy
+- relabel code-like options only when verified
+- remove customer-facing supplier residue such as `Brand Name: NONE` or origin noise
 
-## Product Schema
+## Product schema
 
-Minimal:
+Minimal example:
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "...",
-  "image": ["..."],
-  "description": "...",
-  "brand": {"@type":"Brand","name":"..."},
+  "name": "Product name",
+  "image": ["https://example.com/product.jpg"],
+  "description": "Product description",
+  "brand": { "@type": "Brand", "name": "Brand" },
   "offers": {
-    "@type":"Offer",
-    "priceCurrency": "...",
-    "price": "...",
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "49.00",
     "availability": "https://schema.org/InStock",
-    "url": "..."
+    "url": "https://example.com/products/product-name"
   }
 }
 ```
 
-Tambahkan `aggregateRating` hanya jika review nyata terlihat di halaman.
+Add `aggregateRating` only when real reviews are visible on the page.
 
-## Collection Page Checklist
+## Collection page checklist
 
-Collection yang layak index harus punya:
+An index-worthy collection should have:
 
-- demand search jelas
-- intro copy unik
-- produk cukup
-- filter berguna tapi terkendali
-- internal links ke subcollection/guide
-- FAQ jika membantu intent
-- canonical sendiri
+- clear search demand
+- unique intro copy
+- enough products
+- useful but controlled filters
+- internal links to subcollections/guides
+- FAQ if it helps intent
+- self canonical
 
-Jangan index collection kosong/tipis.
+Do not index empty or thin collections.
 
 ## Image SEO
 
-Untuk setiap image penting:
+For each important image:
 
-- ALT menjelaskan produk, bukan keyword stuffing
-- filename deskriptif bila bisa
-- compress WebP/JPG sesuai kebutuhan
-- dimensi stabil
-- hero product image tidak lazy-load jika LCP
+- ALT describes the product, not keywords stuffed together
+- filename is descriptive where practical
+- image is compressed appropriately
+- dimensions are stable
+- hero product image is not lazy-loaded if it is LCP
 
 ALT pattern:
 
@@ -130,7 +130,7 @@ ALT pattern:
 [Product Title] - [view/angle/feature]
 ```
 
-View label examples:
+View labels:
 
 - front view
 - side angle view
@@ -140,61 +140,61 @@ View label examples:
 - packaging view
 - material close-up view
 
-Fix generic ALT seperti:
+Fix generic ALT values like:
 
 - `main product image`
 - `product image 1`
-- filename acak/supplier code
+- random supplier filenames/codes
 
-## Shopify Liquid Technical Points
+## Shopify Liquid technical checks
 
-Cek theme:
+Check theme templates:
 
-- `theme.liquid` punya dynamic title/meta/canonical
-- canonical tidak salah untuk variant/filter
-- JSON-LD tidak duplikat berlebihan
-- heading hierarchy masuk akal
-- product availability sinkron dengan data Shopify
-- pagination collection crawlable
-- breadcrumb link pakai `<a href>`
+- `theme.liquid` has dynamic title/meta/canonical
+- canonical is correct for variants/filters
+- JSON-LD is not duplicated excessively
+- heading hierarchy is logical
+- product availability matches Shopify data
+- collection pagination is crawlable
+- breadcrumb links use `<a href>`
 
-## Merchant / Feed Hygiene
+## Merchant / feed hygiene
 
-Wajib rapikan:
+Clean and verify:
 
-- product title feed
+- product title
 - description
 - image
 - price
 - availability
-- GTIN/MPN/brand bila ada
+- GTIN/MPN/brand if available
 - product category
 - variant attributes
 
-## Internal Linking
+## Internal linking
 
-Minimal:
+Minimum:
 
 - homepage → top collections
-- collection → product + subcollection + guide
+- collection → products + subcollections + guides
 - product → collection + related products
-- blog → collection/product terkait
-- footer → policy/trust/contact
+- blog → relevant collection/product pages
+- footer → policy/trust/contact pages
 
-## Anti-pattern Shopify
+## Anti-patterns
 
-- duplikasi deskripsi supplier
-- collection semua auto-index walau tipis
-- filter URL terbuka semua ke index
-- review palsu
-- schema rating tanpa review terlihat
-- product title spam keyword
-- sold-out product langsung dihapus tanpa redirect/alternatif
-- canonical semua variant salah arah
-- brand names dimasukkan tanpa izin/user policy
-- CTA seperti buy/shop/add to cart di meta description secara berlebihan
-- origin/supplier noise seperti `Mainland China` tampil di copy
-- batch mutation tanpa pilot dan tanpa rollback/log
+- duplicate supplier descriptions
+- auto-indexing every collection even when thin
+- all filter URLs open to indexing
+- fake reviews
+- rating schema without visible reviews
+- keyword-stuffed product titles
+- deleting sold-out products without redirect/alternatives
+- incorrect canonical handling for variants
+- brand names used without permission/policy
+- excessive CTA language in meta descriptions
+- supplier/origin noise in customer-facing copy
+- bulk mutation without pilot, rollback, or log
 
 ## QA
 
@@ -206,31 +206,31 @@ shopify theme check
 
 Listing QA target:
 
-- 0 product missing SEO title/meta description
-- 0 product missing product category/type when required
-- 0 important image missing ALT
-- 0 junk supplier text in customer-facing copy
-- 0 leftover country/Ships From option unless explicitly needed
+- 0 products missing SEO title/meta description
+- 0 products missing required category/type fields
+- 0 important images missing ALT
+- 0 supplier junk in customer-facing copy
+- 0 leftover country/Ships From option unless explicitly required
 - 0 duplicate handles
-- 0 schema rating without visible reviews
+- 0 schema ratings without visible reviews
 
-Manual check:
+Manual checks:
 
-- view-source product
-- view-source collection
-- Rich Results Test Product schema
+- view source of product page
+- view source of collection page
+- Rich Results Test for Product schema
 - Search Console coverage
 - Merchant Center diagnostics
-- PageSpeed product page
+- PageSpeed for product page
 
-## Final Gate
+## Final gate
 
-Shopify store belum SEO-ready sampai:
+A Shopify store is not SEO-ready until:
 
-- product/collection punya title/meta unik
-- schema Product valid
-- collection tipis noindex/canonical
-- image ALT bagus
-- feed Merchant sehat
-- internal linking jelas
-- checkout/cart/search tidak index
+- product and collection pages have unique title/meta
+- Product schema is valid
+- thin collections/facets are noindex/canonical-controlled
+- important images have good ALT
+- Merchant/feed data is healthy
+- internal linking is clear
+- cart/checkout/search/account pages are not indexed
