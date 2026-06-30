@@ -419,24 +419,59 @@ This repository was validated before publication:
 
 ---
 
-## Public credentials
+## Credits, contact, and license
 
-**Maintainer:** [Ongki Pro](https://ongki.pro)  
-**GitHub:** [@ongkipro](https://github.com/ongkipro)  
-**Email:** [get@ongki.pro](mailto:get@ongki.pro)
+<div align="center">
 
-> Public credentials here mean authorship and contact credentials only. This repository intentionally contains no private tokens, API keys, auth sessions, client secrets, or private customer data.
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <strong>Maintainer</strong><br />
+      <a href="https://ongki.pro">Ongki Pro</a>
+    </td>
+    <td align="center" width="33%">
+      <strong>GitHub</strong><br />
+      <a href="https://github.com/ongkipro">@ongkipro</a>
+    </td>
+    <td align="center" width="33%">
+      <strong>Email</strong><br />
+      <a href="mailto:get@ongki.pro">get@ongki.pro</a>
+    </td>
+  </tr>
+</table>
 
----
+<br />
 
-## License
+[![Website](https://img.shields.io/badge/Website-ongki.pro-111827?style=for-the-badge)](https://ongki.pro)
+[![GitHub](https://img.shields.io/badge/GitHub-ongkipro-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ongkipro)
+[![Email](https://img.shields.io/badge/Email-get%40ongki.pro-2563eb?style=for-the-badge)](mailto:get@ongki.pro)
+[![License](https://img.shields.io/badge/License-MIT-16a34a?style=for-the-badge)](./LICENSE)
 
-MIT — see [LICENSE](./LICENSE).
+<br />
+
+> Public credentials here mean authorship and contact credentials only.  
+> This repository intentionally contains **no private tokens, API keys, auth sessions, client secrets, or private customer data**.
+
+<br />
+
+MIT licensed. See [LICENSE](./LICENSE).
+
+</div>
 
 ---
 
 <div align="center">
 
-**Built for practical SEO implementation, not SEO theatre.**
+### Built for practical SEO implementation, not SEO theatre.
+
+<br />
+
+<strong>Search-ready. Agent-ready. Evidence-first.</strong>
+
+<br /><br />
+
+<sub>
+Google, Bing, Yandex, Pinterest, Shopify, Astro, Claude, OpenAI, Gemini, and other names/logos are trademarks of their respective owners. This project is independent and not affiliated with those companies.
+</sub>
 
 </div>
