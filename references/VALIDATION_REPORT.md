@@ -19,6 +19,7 @@ Validated the documentation pack after adding skill-ready files and integrating 
 - `SKILL_DRAFT.md`
 - `REFERENCE_MANIFEST.md`
 - `OUTPUT_TEMPLATES.md`
+- `PAGE_COMPLETENESS_FORMULA.md`
 - `VALIDATION_REPORT.md`
 - `SEARCH_ENGINE_ALGORITHM_BRIEF.md`
 - `SEARCH_ENGINE_SOURCE_INDEX.md`
@@ -111,6 +112,7 @@ The pack now has:
 - hard rules
 - stack/use-case playbooks
 - templates
+- complete page formula
 - manifest
 - validation report
 - multi-engine algorithm brief

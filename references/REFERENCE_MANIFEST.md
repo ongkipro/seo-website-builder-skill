@@ -14,6 +14,7 @@ Manifest ini memetakan semua file penting di `/home/fantastico/Documents/SEO` ag
 | `SEARCH_ENGINE_ALGORITHM_BRIEF.md` | brief multi-engine algorithm/discovery model terkini |
 | `SEARCH_ENGINE_SOURCE_INDEX.md` | index sumber resmi Google/Bing/Yandex/Pinterest |
 | `ALGORITHM_UPDATE_LOG.md` | log update algoritma dan kebijakan refresh playbook |
+| `PAGE_COMPLETENESS_FORMULA.md` | complete page audit formula: title, description, canonical, robots, headings, images, links, schema, sitemap |
 | `OUTPUT_TEMPLATES.md` | template output audit/build/schema/metadata/change-log |
 | `VALIDATION_REPORT.md` | hasil validasi dokumentasi pack |
 | `COMPACT_SKILL_REFERENCES.md` | referensi ringkas default untuk calon skill |
@@ -88,7 +89,8 @@ The following duplicate export files were converted to redirect stubs:
 
 1. `COMPACT_SKILL_REFERENCES.md`
 2. `PLAYBOOK.md`
-3. relevant stack playbook
+3. `PAGE_COMPLETENESS_FORMULA.md` when auditing one specific page
+4. relevant stack playbook
 
 ### Build mode
 

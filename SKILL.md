@@ -33,6 +33,7 @@ Prefer official search engine/platform documentation and existing project data. 
 | Shopify product/collection/listing/feed | [Shopify SEO Playbook](references/SHOPIFY_SEO_PLAYBOOK.md) |
 | Local/service business | [Local Business SEO Playbook](references/LOCAL_BUSINESS_SEO_PLAYBOOK.md) |
 | Algorithm/update review | [Search Engine Algorithm Brief](references/SEARCH_ENGINE_ALGORITHM_BRIEF.md), [Source Index](references/SEARCH_ENGINE_SOURCE_INDEX.md), [Algorithm Update Log](references/ALGORITHM_UPDATE_LOG.md) |
+| Complete page audit / title-description-schema checklist | [Page Completeness Formula](references/PAGE_COMPLETENESS_FORMULA.md) |
 | Audit/build/schema templates | [Output Templates](references/OUTPUT_TEMPLATES.md) |
 | Deep routing/reference map | [Reference Manifest](references/REFERENCE_MANIFEST.md) |
 
@@ -43,8 +44,9 @@ Prefer official search engine/platform documentation and existing project data. 
 3. Inspect before advising:
    - local codebase: routes/pages, metadata/layout, sitemap/robots, schema, build scripts
    - live site: source HTML, robots/sitemap, canonical, schema, mobile CTA, page experience
-4. Produce the output contract.
-5. Validate using QA checklist.
+4. For important indexable pages, apply the Page Completeness Formula: purpose, metadata, canonical/robots, social metadata, headings, images, links, schema, sitemap, and measurement.
+5. Produce the output contract.
+6. Validate using QA checklist.
 
 ## Output Contract
 
@@ -64,6 +66,7 @@ Internal Linking Plan
 Content Requirements
 Multi-Engine Notes (Google/Bing/Yandex/Pinterest where relevant)
 Technical Implementation
+Complete Page Formula Checks
 QA / Validation Checklist
 Measurement Plan
 Risk Notes

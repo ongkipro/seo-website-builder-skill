@@ -44,6 +44,7 @@ Plan, build, audit, and maintain SEO-ready websites for **Google**, **Bing**, **
 - [Compatible AI agents](#compatible-ai-agents)
 - [Coverage](#coverage)
 - [Inputs and outputs](#inputs-and-outputs)
+- [Page completeness formula](#page-completeness-formula)
 - [How the skill works](#how-the-skill-works)
 - [Installation](#installation)
 - [Example prompts](#example-prompts)
@@ -168,6 +169,7 @@ Internal Linking Plan
 Content Requirements
 Multi-Engine Notes
 Technical Implementation
+Complete Page Formula Checks
 QA / Validation Checklist
 Measurement Plan
 Risk Notes
@@ -196,6 +198,28 @@ Risk Notes
 - [ ] title/meta are unique
 - [ ] key CTAs work on mobile
 ```
+
+---
+
+## Page completeness formula
+
+For important indexable pages, the skill checks the full page package, not just title and description.
+
+| Element | Complete-page rule |
+| --- | --- |
+| Title | Unique, intent-aligned, ideally 45–60 characters; warning above ~65 characters |
+| Description | Unique, useful, ideally 120–160 characters; warning above ~180 characters |
+| Canonical | Absolute URL, usually self-referential for unique pages |
+| Robots | Correct index/noindex/follow rule; `max-image-preview:large` where useful |
+| Social metadata | OG/Twitter title, description, URL, and absolute image URL |
+| Headings | One clear H1, logical H2/H3 structure |
+| Images | Important images have ALT; LCP image is not lazy-loaded |
+| Links | Crawlable internal links with useful anchor text |
+| Schema | JSON-LD only when it matches visible real content |
+| Discovery | Sitemap includes only canonical-indexable URLs; robots.txt references sitemap |
+| Measurement | Search Console / Bing Webmaster / analytics or CTA tracking where relevant |
+
+Dedicated reference: `references/PAGE_COMPLETENESS_FORMULA.md`.
 
 ---
 
@@ -335,6 +359,7 @@ seo-website-builder-skill/
     ├── SEARCH_ENGINE_ALGORITHM_BRIEF.md
     ├── SEARCH_ENGINE_SOURCE_INDEX.md
     ├── ALGORITHM_UPDATE_LOG.md
+    ├── PAGE_COMPLETENESS_FORMULA.md
     ├── OUTPUT_TEMPLATES.md
     ├── TEST_CASES.md
     ├── REFERENCE_MANIFEST.md
@@ -356,6 +381,7 @@ seo-website-builder-skill/
 | `SEARCH_ENGINE_ALGORITHM_BRIEF.md` | Multi-engine algorithm/discovery model |
 | `SEARCH_ENGINE_SOURCE_INDEX.md` | Official/trusted source index |
 | `ALGORITHM_UPDATE_LOG.md` | Algorithm update tracking workflow |
+| `PAGE_COMPLETENESS_FORMULA.md` | Complete page audit formula and examples |
 | `OUTPUT_TEMPLATES.md` | Audit, build plan, schema QA, and metadata templates |
 | `TEST_CASES.md` | Dry-run scenarios for validating the skill |
 | `REFERENCE_MANIFEST.md` | Reference map and load profiles |

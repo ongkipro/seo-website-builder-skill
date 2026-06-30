@@ -152,7 +152,78 @@ Template siap pakai untuk audit, build plan, dan implementasi SEO.
 - [ ] Search Console ready
 ```
 
-## 3. Metadata Pattern Template
+## 3. Complete Page SEO Audit Template
+
+```md
+# Complete Page SEO Audit: {{URL}}
+
+## Summary
+
+- Page type:
+- Search intent:
+- Index decision:
+- Main risk:
+- Main opportunity:
+
+## Core Fields
+
+| Field | Current | Target / Rule | Status |
+| --- | --- | --- | --- |
+| Title | {{TITLE}} | 45–60 chars, unique, intent-first | Pass/Warning/Fail |
+| Description | {{DESCRIPTION}} | 120–160 chars, unique, useful | Pass/Warning/Fail |
+| URL | {{URL}} | stable, descriptive, canonical | Pass/Warning/Fail |
+| Canonical | {{CANONICAL}} | absolute URL | Pass/Warning/Fail |
+| Robots | {{ROBOTS}} | correct index/noindex/follow rule | Pass/Warning/Fail |
+| Lang | {{LANG}} | correct language code | Pass/Warning/Fail |
+| Author/Publisher | {{AUTHOR_PUBLISHER}} | real visible entity | Pass/Warning/Fail |
+
+## Social Metadata
+
+| Field | Current | Status |
+| --- | --- | --- |
+| og:title |  |  |
+| og:description |  |  |
+| og:url |  |  |
+| og:image | absolute URL required |  |
+| twitter:card | summary_large_image preferred |  |
+| twitter:image | absolute URL required |  |
+
+## Content Structure
+
+| Element | Count / Status | Notes |
+| --- | --- | --- |
+| H1 | 1 expected |  |
+| H2/H3 | logical hierarchy |  |
+| Images without ALT | 0 expected |  |
+| Internal links | crawlable `<a href>` |  |
+| External links | trust/citation where useful |  |
+
+## Schema Plan
+
+| Schema | Needed? | Notes |
+| --- | --- | --- |
+| Organization / LocalBusiness / EducationalOrganization |  |  |
+| WebSite |  |  |
+| BreadcrumbList |  |  |
+| FAQPage | only if FAQ visible |  |
+| Product / Service / Article | by page type |  |
+
+## Fixes
+
+### High Priority
+
+1. ...
+
+### Medium Priority
+
+1. ...
+
+### Low Priority
+
+1. ...
+```
+
+## 4. Metadata Pattern Template
 
 ```md
 # Metadata Pattern
@@ -190,7 +261,7 @@ Description:
 `Learn {{topic}} with practical tips for {{audience}}. Covers {{key points}}.`
 ```
 
-## 4. Schema QA Template
+## 5. Schema QA Template
 
 ```md
 # Schema QA
@@ -208,7 +279,7 @@ Rules:
 - Breadcrumb schema must match visible/internal hierarchy.
 ```
 
-## 5. SEO Fix Commit Note Template
+## 6. SEO Fix Commit Note Template
 
 ```md
 # SEO Change Log

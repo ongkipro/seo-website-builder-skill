@@ -63,6 +63,7 @@ Risk Notes
 | Shopify/ecommerce | `SHOPIFY_SEO_PLAYBOOK.md` | 04, 26, 30, 50, 69, 89 |
 | Local business | `LOCAL_BUSINESS_SEO_PLAYBOOK.md` | 08, 49, 56 |
 | Algorithm update | `SEARCH_ENGINE_ALGORITHM_BRIEF.md` | `SEARCH_ENGINE_SOURCE_INDEX.md`, `ALGORITHM_UPDATE_LOG.md` |
+| Complete page audit | `PAGE_COMPLETENESS_FORMULA.md` | 02, 12, 85 |
 | Schema | stack playbook | 12, 91 |
 | Programmatic SEO | `PLAYBOOK.md` | 10, 42, 57, 59, 71, 72 |
 
@@ -89,6 +90,28 @@ Risk Notes
 | Pinterest | claimed site, high-quality vertical visuals, Pin title/description, trends, landing-page match |
 | AI Search | indexed/snippet-eligible pages, passage clarity, entity clarity, trust, freshness |
 
+## Page Completeness Formula
+
+For every important indexable page, verify:
+
+- clear page purpose and search intent
+- unique title, ideally 45–60 characters; warning above ~65 characters
+- meta description, ideally 120–160 characters; warning above ~180 characters
+- absolute canonical URL
+- correct robots directive (`index, follow, max-image-preview:large` for normal indexable pages)
+- OG/Twitter metadata for shareable pages
+- absolute OG/Twitter image URL
+- one clear H1 matching intent
+- logical H2/H3 structure
+- meaningful ALT on important images
+- LCP/hero image not lazy-loaded
+- crawlable internal links
+- eligible JSON-LD schema matching visible content
+- page included in sitemap only if canonical-indexable
+- CTA/conversion measurement ready
+
+Use `PAGE_COMPLETENESS_FORMULA.md` for detailed audit rules and examples.
+
 ## Technical SEO Minimum
 
 - `robots.txt` exists and does not block critical assets.
@@ -104,11 +127,13 @@ Risk Notes
 
 ## Metadata Rules
 
-- Title: unique, intent-aligned, not spammy.
-- Meta description: unique, benefit/trust/intent focused.
+- Title: unique, intent-aligned, not spammy; target 45–60 chars when practical.
+- Meta description: unique, benefit/trust/intent focused; target 120–160 chars when practical.
 - H1: one primary H1 matching page intent.
 - OG/Twitter tags: present for shareable pages.
+- OG/Twitter image URLs: absolute, crawlable, share-friendly.
 - Canonical: self-referential unless duplicate/consolidation is intentional.
+- Meta keywords: not used by Google ranking; optional only as internal targeting notes.
 
 ## Schema Rules
 

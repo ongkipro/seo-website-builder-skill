@@ -99,6 +99,24 @@ Track changes to `/home/fantastico/Documents/SEO` before it becomes an active sk
 - broken local links: clean
 - unfinished-marker sweep: clean
 
+## 2026-06-30 — Added Page Completeness Formula
+
+### Added
+
+- `references/PAGE_COMPLETENESS_FORMULA.md`
+
+### Changed
+
+- Updated `SKILL.md` to route complete page audits to the new formula.
+- Updated `COMPACT_SKILL_REFERENCES.md` with title/description/social/schema completeness checks.
+- Updated `OUTPUT_TEMPLATES.md` with a complete page audit template.
+- Updated `REFERENCE_MANIFEST.md` and `README.md`.
+
+### Notes
+
+- Added guidance for title length, description length, OG/Twitter absolute image URLs, headings, image ALT, schema eligibility, robots/canonical, sitemap inclusion, and measurement readiness.
+- Included an English example based on an Islamic boarding school homepage audit pattern.
+
 ## Future Changelog Template
 
 ```md
